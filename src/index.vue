@@ -1,0 +1,69 @@
+<template>
+    <div id="sys-app" class="sys-app">
+      <Header></Header>
+      <el-row>
+          <el-col :span="4">
+            <LeftMemu></LeftMemu>
+          </el-col>
+
+          <el-col :span="20">
+            <router-view>
+            </router-view>
+          </el-col>
+      </el-row>
+    </div>
+</template>
+
+<script>
+  import Header from './page/common/layout/header';
+  import LeftMemu from './page/common/layout/leftMemu';
+  export default {
+    data() {
+      return {
+        
+      }
+    },
+    components: {
+      Header,LeftMemu
+    }
+  }
+</script>
+
+<style>
+    
+  * {
+    box-sizing: border-box;
+  }
+  html, body, div, section, header, footer, aside, ul, ol, li, table, tr, th, td, button, input, textarea, select, h1, h2, h3, h4, h5, h6, em, i, strong, p, span, blockquote {
+      margin: 0;
+      padding: 0;
+  }
+  h1, h2, h3, h4, h5, h6, em, th, i, strong, input, textarea, button, select {
+      font-weight: normal;
+      font-style: normal;
+      font-size: 100%;
+  }
+  ul, ol {
+      list-style: none;
+      vertical-align: top;
+  }
+  table, td, th {
+      border-collapse: collapse;
+      border-spacing: 0;
+  }
+  input, button, select, textarea {
+      outline: none;
+      background: none;
+  }
+  textarea {
+      resize: none;
+  }
+  img, a img {
+      border: none;
+      vertical-align: top;
+  }
+  html {
+      height: 100%;
+  }
+
+</style>
